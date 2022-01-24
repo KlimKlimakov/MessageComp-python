@@ -4,8 +4,8 @@ include 'include\win32a.inc'
 
  section '.data' data readable writeable
 
-  text db  'Failed', 0
-  text2 db 'You are okay?', 0
+  text db  'Hello!', 0
+  text2 db 'MessageComp', 0
 
  section '.code' code readable executable
 
