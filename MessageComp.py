@@ -9,14 +9,20 @@ def set_text(text = str()):
     global t1
 
     new_text = file.replace(t1, "  text db '" + text + "', 0")
-    file = open("gui.asm", "w").write(new_text)
+    file = open("gui.asm", "w")
+    file.write(new_text)
+    file.close()
+    file = open("gui.asm").read()
 
 def set_title(title = str()):
     global file
     global t2
 
     new_title = file.replace(t2, "  text2 db '" + title + "', 0")
-    file = open("gui.asm", "w").write(new_title)
+    file = open("gui.asm", "w")
+    file.write(new_title)
+    file.close()
+    file = open("gui.asm").read()
 
 def compile():
     os.system("fasm gui.asm")
